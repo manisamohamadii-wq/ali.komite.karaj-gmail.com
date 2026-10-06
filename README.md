@@ -19,6 +19,17 @@ sudo apt-get install poppler-utils tesseract-ocr tesseract-ocr-fas
 python3 scripts/document_pipeline.py
 ```
 
+برای OCR پیشرفتهٔ فرم‌ها و جدول‌های پیچیده، پس از ساخت محیط مجازی، backend CPU و PaddleOCR را نصب کنید:
+
+```bash
+python3 -m venv .venv-ocr
+. .venv-ocr/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements-ocr.txt
+```
+
+نسخهٔ CPU در محیط آزمایشی با `PaddlePaddle 3.3.1` و `PaddleOCR 3.7.0` بررسی شده است. مدل‌ها ممکن است در اولین اجرا دانلود شوند؛ دریافت مدل را فقط از منبع مورد اعتماد و در محیط کنترل‌شده انجام دهید.
+
 ## محدودیت‌های عمدی
 
 این پروژه **اصالت یا اعتبار قضایی سند را تأیید نمی‌کند** و تفسیر حقوقی، تشخیص مسئولیت، صدور خودکار حکم یا نامه، تولید مهر و امضا، تغییر سوابق یا ارسال الزام‌آور به اشخاص و مراجع را انجام نمی‌دهد. هر متن نهایی باید توسط شخص مجاز بررسی و در سامانهٔ رسمی ثبت شود.
